@@ -1,19 +1,20 @@
 #!/bin/bash
 
 source ./config.sh
+. ./time.sh
 
-#work_dir=/home/kmota01/test_align
-#sample=SRR23693880
-
+output_dir=$work_dir/ref_map
 script_dir='/home/kmota01/apps/lumpy-sv/scripts'
 
 #step 1: find discordant and split-reads
-samtools view -b -F 1294 $work_dir/ref_map/${sample}_sorted.bam > $work_dir/ref_map/${sample}.discordants_unsorted.bam
-samtools view -h $work_dir/ref_map/${sample}.bam \
+file=disc_and_splitters
+fx=$"samtools view -b -F 1294 $output_dir/${sample}_sorted.bam > $output_dir/${sample}.discordants_unsorted.bam
+samtools view -h $output_dir/${sample}.bam \
     | $script_dir/extractSplitReads_BwaMem -i stdin \
     | samtools view -Sb - \
-    > $work_dir/ref_map/${sample}.splitters_unsorted.bam
+    > $output_dir/${sample}.splitters_unsorted.bam"
+    $(time_count "$fx" "$output_dir" "$file")
 
 #step 2: coordinate sorting (by chromosome and position)
-samtools sort $work_dir/ref_map/${sample}.discordants_unsorted.bam -o $work_dir/ref_map/${sample}.discordants.bam
-samtools sort $work_dir/ref_map/${sample}.splitters_unsorted.bam -o $work_dir/ref_map/${sample}.splitters.bam
+samtools sort $output_dir/${sample}.discordants_unsorted.bam -o $output_dir/${sample}.discordants.bam
+samtools sort $output_dir/${sample}.splitters_unsorted.bam -o $output_dir/${sample}.splitters.bam
