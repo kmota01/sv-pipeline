@@ -2,6 +2,8 @@
 
 source ./config.sh
 
+start_time=$(date +%s)
+
 #work__dir=/home/kmota01/test_align
 #sample=SRR23693880
 
@@ -23,3 +25,8 @@ samtools view -r readgroup1 $work_dir/ref_map/${sample}_sorted.bam \
 	-N 10000 \
 	-o $work_dir/sv_call/lumpy/${sample}.lib1.histo \
 	> $work_dir/sv_call/lumpy/${sample}.histo.log
+
+end_time=$(date +%s)
+
+runtime=$((end_time-start_time))
+echo $runtime

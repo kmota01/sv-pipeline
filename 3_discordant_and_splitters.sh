@@ -7,7 +7,6 @@ source ./config.sh
 
 script_dir='/home/kmota01/apps/lumpy-sv/scripts'
 
-
 #step 1: find discordant and split-reads
 samtools view -b -F 1294 $work_dir/ref_map/${sample}_sorted.bam > $work_dir/ref_map/${sample}.discordants_unsorted.bam
 samtools view -h $work_dir/ref_map/${sample}.bam \
