@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 source ./config.sh
 
 script1=./1_qc_and_trimming.sh
