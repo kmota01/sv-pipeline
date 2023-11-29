@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#This module helps to parse command-line arguments in bash scripts. 
+#Script can be executed by defining the arguments as: ./script.sh -i sample_name -w work_dir
 
 sample=""
 work_dir=""
