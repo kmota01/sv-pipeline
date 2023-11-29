@@ -1,13 +1,5 @@
 #!/bin/bash
 
-#SBATCH --job-name=lumpy-test
-#SBATCH --time=01:00:00
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --output=output.%j.lumpy-test
-
-#### SLURM 1 processor LUMPY test to run for 1 hours.
-
 source ./config.sh
 . ./time.sh
 
