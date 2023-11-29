@@ -1,6 +1,8 @@
 #!/bin/bash
 
-#set -x
+#This module keeps track of execution and completion date, and total runtime of a script.
+
+#set -x   #for debugging
 
 . ./time_converter.sh
 
