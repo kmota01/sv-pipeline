@@ -29,7 +29,7 @@ samtools: prepares a file containing the insert-size distribution of the reads 
 lumpy_run.sh: ---> SV analysis
 lumpy-sv software: performs SV analysis and produces a variant file (.vcf)
 
-manta.sh  ---> SV analysis
+manta_run.sh  ---> SV analysis
 manta software: performs SV analysis and produces a compressed variant file (.vcf.gz)
 
 #Config.sh
