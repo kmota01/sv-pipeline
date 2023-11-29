@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 source ./config.sh
 
 if [[ ! -e $output_dir ]];then
