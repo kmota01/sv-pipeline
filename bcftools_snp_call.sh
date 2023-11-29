@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 source ./config.sh
 
 #work_dir=/home/kmota01/test_align
