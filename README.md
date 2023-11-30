@@ -31,7 +31,3 @@ lumpy-sv software: performs SV analysis and produces a variant file (.vcf)
 
 manta_run.sh  ---> SV analysis
 manta software: performs SV analysis and produces a compressed variant file (.vcf.gz)
-
-#Config.sh
-Helps to add parse-like command in bash scripts. You can now execute the pipeline by defining the parameters: sample_name & work_dir on terminal
-execution command: 12345_pipeline.sh -i sample_name -w work_dir
