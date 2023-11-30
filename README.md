@@ -1,33 +1,42 @@
-# sv-pipeline
-PIPELINE FOR DNA SEQUENCING ANALYSIS AND PREPARATION OF DATA FOR STRUCTURAL VARIANT DETECTION
+# SV-PIPELINE
 
-script1  ---> Dna sequencing analysis
-fastqc software: to produce quality control(qc) reports for each sample
-multiqc software: to combine multiple  qc reports of different samples into one for better comparison
+12345_pipeline is a workflow of short-read sequencing-data preprocessing and analysis for Structural Variant(SV) detection. It executes 5 minor scripts for the steps of: Quality Control, Trimming, Mapping to reference genome, Mark & Remove Duplicates, Sort and Index, Discordant and Split-reads identification, Preparation for SV analysis with lumpy-sv, and SV detection with lumpy. 
+
+To execute the pipeline you simply need to create a working directory with your sequencing data (fastq.gz), that also contains the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
+
+Command to Execute:
+bash 12345_pipeline.sh -i sample_name -w work_dir
+
+
+*Additional scripts can be found for the: Detection of SNPs and Indels with bcftools, SV detection with Manta software, and SV genotyping with SV-typer.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+SOFTWARE REQUIREMENTS PER SCRIPT
+
+script1:
+fastqc: to produce quality control(qc) reports for each sample
+multiqc: to combine multiple qc reports of different samples into one for better comparison
 trimmomatic: trim special sequences (adapters, low quality reads, etc)
 
-After trimming quality control steps are repeated to compare if the trimming results are of higher quality than the ones of raw reads(before trimming)
-
-script2: --->  Dna sequencing analysis
+script2:
 bwa mem: to map the trimmed reads with reference genome (h38)
-picard tools: to exclude duplicate reads arising from PCR amplification
+picard: to mark and exclude duplicate reads arising from PCR amplification
 samtools: to sort the the alignment file by coordinate (position and chromosome)
 samtools: index the alignment file
 
-script3: ---> Prepare data for SV analysis
-samtools: to produce a file of discordant reads (reads that don't align properly to the reference, may have unexpected insert size, or wrong orientation)
-samtools: to produce a file of split-reads (reads that present non-continuous alignment to the reference)samtools: sort the above files by coordinate (position and chromosome)
+script3:
+samtools: to produce a file of discordant reads
+samtools: to produce a file of split-reads 
 
-The discordant and split-reads indicate the existance of structural variants and sometimes can even predict the exact breakpoints. They are used as input files in the SV analysis with lumpy software.
+script4: 
+samtools: prepares a file containing the insert-size distribution of the reads and serves as an input for lumpy-sv to perform the SV analysis
 
-script4: ---> Prepare data for SV analysis with lumpy
-samtools: prepares a file containing the insert-size distribution of the reads and  is used as an input for lumpy software that performs the SV analysis
+5_lumpy_run:
+lumpy: performs SV analysis and produces a variant file (.vcf)
 
+manta_run:
+manta: performs SV analysis and produces a compressed variant file (.vcf.gz)
 
-#SCRIPT FOR SV ANALYSIS
-
-lumpy_run.sh: ---> SV analysis
-lumpy-sv software: performs SV analysis and produces a variant file (.vcf)
-
-manta_run.sh  ---> SV analysis
-manta software: performs SV analysis and produces a compressed variant file (.vcf.gz)
