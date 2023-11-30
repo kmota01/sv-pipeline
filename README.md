@@ -1,15 +1,12 @@
 # SV-PIPELINE
 
 Description:
-
 12345_pipeline is a workflow of short-read sequencing-data preprocessing and analysis for Structural Variant(SV) detection. It executes 5 minor scripts for the steps of: Quality Control, Trimming, Mapping to reference genome, Mark & Remove Duplicates, Sort and Index, Discordant and Split-reads identification, Preparation for SV analysis with lumpy-sv, and SV detection with lumpy. 
 
 Requirements:
-
 To execute the pipeline you simply need to create a working directory with your sequencing data (fastq.gz), that also contains the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
 
 Execute:
-
 bash 12345_pipeline.sh -i sample_name -w work_dir
 
 
