@@ -6,9 +6,8 @@ Description:
 
 *To execute the pipeline you simply need to create a working directory including your sequencing data (fastq.gz), and the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
 
-
-
-Execute:                bash 123456_pipeline.sh -i sample_name -w work_dir -s software
+Execute:
+$ bash 123456_pipeline.sh -i sample_name -w work_dir -s software
 
 
 work_dir: working directory for the SV analysis
