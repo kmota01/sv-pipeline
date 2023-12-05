@@ -21,26 +21,27 @@ file=map_to_ref
 fx=$"bwa mem -t 10 $ref $forward_reads $reverse_reads | samtools view -Shb -o $output_dir/${sample}_withDups.bam -"
 time_count "$fx" "$output_dir" "$file"
 
-#step 2: Sorting alignment file by queryname
+#step 2: Sort alignment file by queryname
 file=sort_queryname
 fx=$"java -jar $picard SortSam -I $output_dir/${sample}_withDups.bam -O $output_dir/${sample}_withDups_sorted.bam -SO queryname"
 time_count "$fx" "$output_dir" "$file"
 
-#step 3: Mark duplicates arising from PCR-amplification or library artifacts
+#step 3: Mark & Remove duplicates arising from PCR-amplification or library artifacts
 file=mark_dup
 fx=$"java -jar $picard MarkDuplicates -INPUT $output_dir/${sample}_withDups_sorted.bam -OUTPUT $output_dir/${sample}_sorted.bam -METRICS_FILE $output_dir/deduplicated_metrics.txt --REMOVE_DUPLICATES true"
 time_count "$fx" "$output_dir" "$file"
 
-#step 4: Sorting alignment file by coordinate is necessary for performing SV analysis
+#step 4: Sort alignment file by coordinate is necessary for performing SV analysis
 file=sort_coord
 fx=$"samtools sort $output_dir/${sample}_sorted.bam -o $output_dir/${sample}.bam"
 time_count "$fx" "$output_dir" "$file"
 
-#step 5: Indexing alignment file
+#step 5: Index alignment file
 file=index
 fx=$"samtools index $output_dir/${sample}.bam" 
 time_count "$fx" "$output_dir" "$file"
 
 #step 6: Create a file with statistics about the alignment flags
 echo "sample:" ${sample} > $output_dir/stats.txt | samtools flagstats $output_dir/${sample}.bam >> $output_dir/stats.txt
+
 
