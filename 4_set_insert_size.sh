@@ -19,3 +19,5 @@ samtools view -r readgroup1 $input_dir/${sample}.bam | tail -n+100000 \
 	| $script_dir/pairend_distro.py -r 101 -X 4 -N 10000 -o $output_dir/${sample}.lib1.histo \
 	> $output_dir/${sample}.histo.log
 mv $output_dir/${sample}.histo.log $output_dir/${sample}.lib1.histo
+
+
