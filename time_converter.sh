@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#This function converts the time from seconds to a format like days:hours:minutes:seconds
-
 convert_seconds() {
 
 seconds=$1

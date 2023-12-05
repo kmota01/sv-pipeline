@@ -1,9 +1,6 @@
 #!/bin/bash
 
-
 source ./config.sh
-
-#work_dir=/home/kmota01/test_align
 
 if [[ ! -e $work_dir/var_call ]];then
         mkdir $work_dir/snp_call
