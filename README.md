@@ -22,6 +22,7 @@ software: SV analysis software of your choice (lumpy or manta)
 SOFTWARE REQUIREMENTS PER SCRIPT
 
 
+
 script1:
 
 fastqc: FastQC v0.11.9
@@ -29,6 +30,7 @@ fastqc: FastQC v0.11.9
 multiqc: multiqc, version 1.18
 
 trimmomatic: Trimmomatic-0.39
+
 
 
 script2:
@@ -40,9 +42,11 @@ picard: picard-3.1.0
 samtools: samtools 1.10
 
 
+
 script5:
 
 lumpy: lumpy-sv (https://github.com/arq5x/lumpy-sv)
+
 
 
 script6:
