@@ -15,3 +15,4 @@ python $manta_dir/configManta.py --normalBam=$work_dir/ref_map/${sample}.bam --r
 #step 2: Run manta workflow
 python $work_dir/sv_call/manta/runWorkflow.py
 
+
