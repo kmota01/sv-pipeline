@@ -7,7 +7,8 @@ Description:
 *To execute the pipeline you simply need to create a working directory including your sequencing data (fastq.gz), and the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
 
 
-Execute: \n
+Execute:
+
 bash 123456_pipeline.sh -i sample_name -w work_dir -s software
 
 work_dir: working directory for the SV analysis\n
@@ -18,23 +19,27 @@ software: SV analysis software of your choice (lumpy or manta)
 
 SOFTWARE REQUIREMENTS PER SCRIPT
 
-script1:\n
+script1:
+
 fastqc: FastQC v0.11.9
 multiqc: multiqc, version 1.18
 trimmomatic: Trimmomatic-0.39
 
 
-script2:\n
+script2:
+
 bwa: bwa-0.7.17-r1188
 picard: picard-3.1.0
 samtools: samtools 1.10
 
 
-script5:\n
+script5:
+
 lumpy: lumpy-sv (https://github.com/arq5x/lumpy-sv)
 
 
-script6:\n
+script6:
+
 manta: manta-1.6.0 (https://github.com/Illumina/manta/releases)
 
 
