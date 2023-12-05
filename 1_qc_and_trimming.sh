@@ -27,7 +27,6 @@ OutputForwardUnpaired=$work_dir/trimmed_reads/${sample}_forward_unpaired.fastq.g
 OutputReversePaired=$work_dir/trimmed_reads/${sample}_reverse_paired.fastq.gz
 OutputReverseUnpaired=$work_dir/trimmed_reads/${sample}_reverse_unpaired.fastq.gz
 
-
 #Quality control is done BEFORE and AFTER trimming to validate the better quality of the data after trimming.
 
 #step 1: quality control of raw reads with FASTQC
