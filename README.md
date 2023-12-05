@@ -8,8 +8,7 @@ Description:
 
 
 
-Execute:
-        bash 123456_pipeline.sh -i sample_name -w work_dir -s software
+Execute:                bash 123456_pipeline.sh -i sample_name -w work_dir -s software
 
 
 work_dir: working directory for the SV analysis
