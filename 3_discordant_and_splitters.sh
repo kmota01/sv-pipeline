@@ -18,3 +18,5 @@ samtools view -h $output_dir/${sample}.bam \
 #step 2: coordinate sorting (by chromosome and position)
 samtools sort $output_dir/${sample}.discordants_unsorted.bam -o $output_dir/${sample}.discordants.bam
 samtools sort $output_dir/${sample}.splitters_unsorted.bam -o $output_dir/${sample}.splitters.bam
+
+
