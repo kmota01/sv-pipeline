@@ -21,6 +21,7 @@ software: SV analysis software of your choice (lumpy or manta)
 
 SOFTWARE REQUIREMENTS PER SCRIPT
 
+
 script1:
 
 fastqc: FastQC v0.11.9
