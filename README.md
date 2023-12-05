@@ -17,41 +17,29 @@ software: SV analysis software of your choice (lumpy or manta)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 SOFTWARE REQUIREMENTS PER SCRIPT
 
 script1:
 
-fastqc: to produce quality control(qc) reports for each sample
-multiqc: to combine multiple qc reports of different samples into one for better comparison
-trimmomatic: trim special sequences (adapters, low quality reads, etc)
+fastqc: FastQC v0.11.9
+multiqc: multiqc, version 1.18
+trimmomatic: Trimmomatic-0.39
 
 
 script2:
 
-bwa mem: to map the trimmed reads with reference genome (h38)
-picard: to mark and exclude duplicate reads arising from PCR amplification
-samtools: to sort the the alignment file by coordinate (position and chromosome)
-samtools: index the alignment file
+bwa: bwa-0.7.17-r1188
+picard: picard-3.1.0
+samtools: samtools 1.10
 
 
-script3:
+script5:
 
-samtools: to produce a file of discordant reads
-samtools: to produce a file of split-reads 
-
-
-script4: 
-
-samtools: prepares a file containing the insert-size distribution of the reads and serves as an input for lumpy-sv to perform the SV analysis
+lumpy: lumpy-sv (https://github.com/arq5x/lumpy-sv)
 
 
-5_lumpy_run:
+script6:
 
-lumpy: performs SV analysis and produces a variant file (.vcf)
+manta: manta-1.6.0 (https://github.com/Illumina/manta/releases)
 
-
-manta_run:
-
-manta: performs SV analysis and produces a compressed variant file (.vcf.gz)
 
