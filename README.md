@@ -24,14 +24,18 @@ SOFTWARE REQUIREMENTS PER SCRIPT
 script1:
 
 fastqc: FastQC v0.11.9
+
 multiqc: multiqc, version 1.18
+
 trimmomatic: Trimmomatic-0.39
 
 
 script2:
 
 bwa: bwa-0.7.17-r1188
+
 picard: picard-3.1.0
+
 samtools: samtools 1.10
 
 
