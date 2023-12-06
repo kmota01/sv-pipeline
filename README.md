@@ -25,32 +25,32 @@ SOFTWARE REQUIREMENTS PER SCRIPT
 
 script1:
 
-fastqc: FastQC v0.11.9
+FastQC-v0.11.9
 
-multiqc: multiqc, version 1.18
+multiqc-1.18
 
-trimmomatic: Trimmomatic-0.39
+Trimmomatic-0.39
 
 
 
 script2:
 
-bwa: bwa-0.7.17-r1188
+bwa-0.7.17-r1188
 
-picard: picard-3.1.0
+picard-3.1.0
 
-samtools: samtools 1.10
+samtools-1.10
 
 
 
 script5:
 
-lumpy: lumpy-sv (https://github.com/arq5x/lumpy-sv)
+lumpy-sv (https://github.com/arq5x/lumpy-sv)
 
 
 
 script6:
 
-manta: manta-1.6.0 (https://github.com/Illumina/manta/releases)
+manta-1.6.0 (https://github.com/Illumina/manta/releases)
 
 
