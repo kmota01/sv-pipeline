@@ -27,3 +27,5 @@ echo "Completion Date:" $CompletionDate >> $output/${file}.error.log
 echo "RealTime:" $converted_time >> $output/${file}.error.log
 
 }
+
+
