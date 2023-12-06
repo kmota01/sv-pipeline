@@ -2,54 +2,52 @@
 
 123456_pipeline is a workflow of short-read sequencing-data preprocessing and analysis for Structural Variant(SV) detection. It executes 6 minor scripts for the steps of: Quality Control, Trimming, Mapping to reference genome, Mark & Remove Duplicates, Sort and Index, Discordant and Split-read identification, and SV detection with Lumpy or Manta.
 
-### Configuration
+*Configuration*
+
 To execute the pipeline you simply need to create a working directory including your sequencing data (fastq.gz), and the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
 
-Execute:
+*Execute:*
 
-$ bash 123456_pipeline.sh -i sample_name -w work_dir -s software
+`bash 123456_pipeline.sh -i sample_name -w work_dir -s software`
 
-
-work_dir: working directory for the SV analysis
-
-sample_name: name of the sequencing data, not including the '_1.fastq.gz' or '_2.fastq.gz' suffix. (If the sequencing data are SR2356_1.fastq.gz and SR2356_2.fastq.gz then sample_name=SR2356)
-
-software: SV analysis software of your choice (lumpy or manta)
+* work_dir: working directory for the SV analysis
+* sample_name: name of the sequencing data, not including the '_1.fastq.gz' or '_2.fastq.gz' suffix. (If the sequencing data are SR2356_1.fastq.gz and SR2356_2.fastq.gz then sample_name=SR2356)
+* software: SV analysis software of your choice (lumpy or manta)
 
 
 # INSTALLATION
 
 
-### Requirements
+*Requirements*
 
-script1:
+* script1:
 
-FastQC-v0.11.9
+  * FastQC-v0.11.9
 
-multiqc-1.18
+  * multiqc-1.18
 
-Trimmomatic-0.39
-
-
-
-script2:
-
-bwa-0.7.17-r1188
-
-picard-3.1.0
-
-samtools-1.10
+  * Trimmomatic-0.39
 
 
 
-script5:
+* script2:
 
-lumpy-sv (https://github.com/arq5x/lumpy-sv)
+  * bwa-0.7.17-r1188
+
+  * picard-3.1.0
+
+  * samtools-1.10
 
 
 
-script6:
+* script5:
 
-manta-1.6.0 (https://github.com/Illumina/manta/releases)
+  * lumpy-sv (https://github.com/arq5x/lumpy-sv)
+
+
+
+* script6:
+
+  *  manta-1.6.0 (https://github.com/Illumina/manta/releases)
 
 
