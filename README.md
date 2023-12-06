@@ -4,7 +4,8 @@ Description:
 
 123456_pipeline is a workflow of short-read sequencing-data preprocessing and analysis for Structural Variant(SV) detection. It executes 6 minor scripts for the steps of: Quality Control, Trimming, Mapping to reference genome, Mark & Remove Duplicates, Sort and Index, Discordant and Split-read identification, and SV detection with Lumpy or Manta.
 
-*To execute the pipeline you simply need to create a working directory including your sequencing data (fastq.gz), and the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
+Configuration
+To execute the pipeline you simply need to create a working directory including your sequencing data (fastq.gz), and the corresponding library to your sequencing-technology. You can execute the pipeline from any directory as long as you define a working path for the analysis.
 
 Execute:
 
@@ -19,9 +20,10 @@ software: SV analysis software of your choice (lumpy or manta)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-SOFTWARE REQUIREMENTS PER SCRIPT
+INSTALLATION
 
 
+Requirements
 
 script1:
 
