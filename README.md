@@ -11,7 +11,7 @@ To execute the pipeline you simply need to create a working directory including 
 `bash 123456_pipeline.sh -i sample -w work_dir -s software`
 
 * work_dir: working directory for the SV analysis
-* sample: name of the sequencing data, not including the '_1.fastq.gz' or '_2.fastq.gz' suffix. (If the sequencing data are SR2356_1.fastq.gz and SR2356_2.fastq.gz then sample_name=SR2356)
+* sample: name of the sequencing data, not including the '_1.fastq.gz' or '_2.fastq.gz' suffix. (If the sequencing data are SR2356_1.fastq.gz and SR2356_2.fastq.gz then sample=SR2356)
 * software: SV analysis software of your choice (lumpy or manta)
 
 
