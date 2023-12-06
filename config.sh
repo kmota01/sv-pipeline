@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This module helps to parse command-line arguments in bash scripts. 
-# To Execute: ./script.sh -i sample_name -w work_dir -s software
+# To Execute: ./script.sh -i sample -w work_dir -s software
 
 sample=""
 work_dir=""
@@ -33,3 +33,5 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+
