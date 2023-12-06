@@ -20,7 +20,7 @@ To execute the pipeline you simply need to create a working directory including 
 
 *Requirements*
 
-* script1:
+* 1_qc_and_trimming.sh:
 
   * FastQC-v0.11.9
 
@@ -30,7 +30,7 @@ To execute the pipeline you simply need to create a working directory including 
 
 
 
-* script2:
+* 2_align_and_sort.sh:
 
   * bwa-0.7.17-r1188
 
@@ -40,13 +40,13 @@ To execute the pipeline you simply need to create a working directory including 
 
 
 
-* script5:
+* 5_lumpy_run.sh:
 
   * lumpy-sv (https://github.com/arq5x/lumpy-sv)
 
 
 
-* script6:
+* 6_manta_run.sh:
 
   *  manta-1.6.0 (https://github.com/Illumina/manta/releases)
 
