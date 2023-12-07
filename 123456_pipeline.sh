@@ -12,7 +12,7 @@ script4=./4_set_insert_size.sh
 script5=./5_lumpy_run.sh
 script6=./6_manta_run.sh
 
-#Lumpy and Manta both need a coordinate-sorted alignment file (.bam) as an input. If this input exists the preprossecing of the sequencing-data will not be repeated.
+#Lumpy and Manta both need a coordinate-sorted alignment file (.bam) as an input. If this input exists the preprocessing of the sequencing-data will not be repeated.
 if [[ ! -e $work_dir/ref_map/${sample}.bam ]]; then
 	for proc in $script1 $script2;do
         	bash $proc -i $sample -w $work_dir
