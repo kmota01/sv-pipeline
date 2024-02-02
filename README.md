@@ -24,7 +24,7 @@ To execute the pipeline you simply need to create a working directory including 
 
   * FastQC-v0.11.9
 
-  * multiqc-1.18
+  * multiqc-1.19
 
   * Trimmomatic-0.39
 
